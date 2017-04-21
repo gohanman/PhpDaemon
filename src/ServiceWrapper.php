@@ -79,7 +79,7 @@ class ServiceWrapper
         $this->pid = $daemon;
         file_put_contents($this->pidFile, $daemon);
         $this->registerSignals();
-        $this->wrappedService->start($status);
+        $this->wrappedService->start($this->status);
     }
 
     /**
